@@ -14,11 +14,15 @@ function Counter({initialCount = 0, step = 1}) {
        )
     }
   ,[count])
+  const testStatic = React.useMemo(()=>{
+    return Test()
+  },[])
 
   return (
     <>
-    <button onClick={increment}>{count}</button><Test/>
+    <button onClick={increment}>{count}</button>
       {myList}
+      {testStatic}
     </>
   )
 }
