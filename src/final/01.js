@@ -22,10 +22,10 @@ function Counter({initialCount = 0, step = 1}) {
     </>
   )
 }
-// function Test(){
-//   console.log("static is rendered")
-//   return <div>i am static</div>
-// }
+function Test(){
+  console.log("static is rendered")
+  return <div>i am static</div>
+}
 function MyList({cnt}){
   console.log("list is rendered")
   const list = []
