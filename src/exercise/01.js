@@ -4,8 +4,11 @@
 import * as React from 'react'
 
 function reducer(oldVal, func){
-
-  return func(oldVal)
+  const val = func(oldVal)
+  if(val < 10)
+    return func(oldVal)
+  else
+    return 10
 }
 function Counter({initialCount = 0, step = 1}) {
   // 🐨 replace React.useState with React.useReducer.
